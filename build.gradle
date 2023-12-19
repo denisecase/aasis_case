@@ -1,0 +1,150 @@
+// Before checking in code, please open a command window and run:
+// ***************************************
+// gradle clean build javaDoc assemble
+// ***************************************
+// to build the project, update the API docs, and assemble the jar.
+
+apply plugin: 'java'
+apply plugin: 'project-report'   // gradle clean projectReport
+apply plugin: 'application'      // gradle distZip
+apply plugin: 'eclipse'          // gradle cleanEclipse eclipse
+apply plugin: 'idea'             // gradle cleanIdeaProject ideaProject
+
+
+group = 'edu.nwmissouri.isl.aasis.case'
+description = 'AASIS Agent representing a person'
+version = '0.1-SNAPSHOT'
+
+// application
+mainClassName = 'edu.nwmissouri.isl.aasis.case.Launcher'
+applicationDefaultJvmArgs = ["-Dgreeting.language=en"]
+
+
+task createDocs {
+    def docs = file("$buildDir/docs")
+    outputs.dir docs
+    doLast {
+        docs.mkdirs()
+    }
+}
+
+applicationDistribution.from(createDocs) {
+    into "docs"
+}
+
+task myJavadoc(type: Javadoc) {
+    title = "AASIS Agent ${version}"
+    source = sourceSets.main.java
+    classpath = configurations.compile
+}
+task javadocJar(type: Jar, dependsOn: myJavadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+
+jar {
+    manifest {
+        attributes("Implementation-Title": "AASIS", "Implementation-Version": version)
+    }
+}
+
+jar.manifest.writeTo("$buildDir/mymanifest.mf")
+
+
+test {
+    systemProperties 'property': 'value'
+}
+// to publish the jarfile, run 
+// gradle uploadArchives
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+compileTestJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+repositories {
+    mavenCentral()
+    // mavenLocal()
+}
+
+def Properties props = new Properties()
+props.load(new FileInputStream(file('run.properties')))
+
+sourceSets {
+    main {
+        java { srcDir 'src/main/java' }
+        resources { srcDirs =['src/main/resources','configs' ]}
+    }
+    test {
+        java { srcDir "src/test/java" }
+        resources { srcDirs = ["src/test/resources", "src/test/java"] }
+    }
+}
+
+configurations {
+    dist
+}
+
+def jdkHome = System.getenv("JAVA_HOME")
+dependencies {
+    compile files("$jdkHome/lib/tools.jar")
+
+    compile 'com.rabbitmq:amqp-client:3.2.4'
+    compile 'commons-cli:commons-cli:1.1'
+    compile 'commons-io:commons-io:1.2'
+
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'ch.qos.logback:logback-classic:1.0.13'
+    compile 'ch.qos.logback:logback-core:1.0.13'
+
+    compile 'joda-time:joda-time:2.2'
+    compile 'org.codehaus.groovy:groovy-all:2.1.5'
+
+    compile fileTree(dir: 'src/main/resources/lib', include: 'agenttool.core_1.1.4.jar')
+    compile fileTree(dir: 'src/main/resources/lib/', include: 'omacs-4.1.02.jar')
+    compile fileTree(dir: 'src/main/resources/lib/', include: 'gmods-2.1.02.jar')
+    compile fileTree(dir: 'src/main/resources/lib/', include: 'obaa_pp-1.0.0.jar')
+    compile fileTree(dir: 'src/main/resources/lib/', include: 'aasis-1.0-SNAPSHOT.jar')
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'org.mockito:mockito-all:1.9.5-rc1'
+    testCompile 'cglib:cglib-nodep:2.2'
+}
+
+task javaDoc(type: Javadoc) {
+    title = "AASIS Agent ${version}"
+    source = sourceSets.main.java
+    classpath = configurations.compile
+}
+
+classes.dependsOn clean
+run.dependsOn classes
+
+
+println "java.version = ${System.getProperty('java.version')}"
+println "java.home    = ${System.getProperty('java.home')}"
+println "user.dir (working directory) = ${System.getProperty('user.dir')}"
+println "user.home    = ${System.getProperty('user.home')}"
+println "JAVA_HOME environment variable = ${System.getenv("JAVA_HOME")}"
+println "JDK_HOME environment variable = ${System.getenv("JDK_HOME")}"
+println "IDEA_HOME environment variable = ${System.getenv("IDEA_HOME")}"
+println "IDEA_JDK_64 environment variable = ${System.getenv("IDEA_JDK_64")}"
+println "jdkHome =  ${jdkHome}"
+
+// creates files to allow bootstrapping
+task wrapper(type: Wrapper) { gradleVersion = '2.8' }

@@ -1,0 +1,82 @@
+# All directories should end in / (information used by ide.gradle)
+
+logs/
+
+#Gradle
+.gradle
+.nb-gradle
+build/
+.gradle/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Maven
+target/
+*.class
+
+# Eclipse project files
+*.classpath
+*.project
+.metadata/
+bin/
+tmp/
+
+# Netbeans
+nbproject/
+nbproject/private/ 
+nb-build.xml
+profiles.xml
+nbproject
+nbbuild/
+
+# Intellij JetBrains IDE
+out/
+build/
+production/
+
+## Directory-based project format - for now, we don't share project copyright headers, code styles, VCS settings, etc
+.idea/
+
+# always ignore user-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+
+# always ignore sensitive files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+
+# ignore as well
+.idea/dynamic.xml
+.idea/libraries
+ 
+# Ignore old-style file-based project format with user-specific settings
+*.iws
+*.ipr
+
+# Project files (https://intellij-support.jetbrains.com/entries/23393067)
+# Ignore these, see http://sevennet.org/2014/12/02/how-to-what-should-be-in-my-gitignore-for-an-android-studio-project/
+*.iml
+.idea/modules.xml
+ 
+# other
+.refactorings/
+.codepro/
+.externalToolBuilders/
+notused/
+dist/
+hs_err_pid2152.log
+*.swp
+
+# Windows
+Thumbs.db
+
+# Mac
+.DS_Store
+
+# Temporary Files
+*~
+
+/logs
+/.settings

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoleDiagram version="1.1" name="Role Model" embedded="false">
+	<Capability id="9f5e283f-64e5-4f4d-ad34-71c2d3e22e48" name="IInternalCommunicationCapability" x="410" y="278" width="-1" height="-1">
+	</Capability>
+	<Capability id="3210f02d-076d-498f-9854-76891829b082" name="DateTimeCapability" x="450" y="187" width="-1" height="-1">
+	</Capability>
+	<Capability id="67b0fa62-3a34-46db-99b6-e1bd85674136" name="AutonomousOperationCapability" x="408" y="98" width="-1" height="-1">
+	</Capability>
+	<Capability id="26eab491-3073-4c07-a632-94db6746e681" name="SetupGameCapability" x="103" y="95" width="-1" height="-1">
+	</Capability>
+	<Capability id="c4c47df6-f405-4b86-9b28-1f325aa17ab5" name="RefereeGameCapability" x="253" y="97" width="-1" height="-1">
+	</Capability>
+	<Capability id="2612db8b-88b5-4d33-b134-ea6ed6fb3741" name="PlayGameCapability" x="642" y="98" width="-1" height="-1">
+	</Capability>
+	<Goal id="98d1a8d5-4aa5-42ff-a055-041ba218f709" name="ManageGame" number="0" preference="1.0" x="195" y="268" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="fc28816a-1e4c-4d3b-ad20-21499cb88c22" name="PlayGame" number="1" preference="1.0" x="745" y="272" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Role id="95254fde-7e91-462f-bce7-8a8f2298ef42" name="RefereeRole" x="296" y="185" width="-1" height="-1">
+		<requires>
+			<child>67b0fa62-3a34-46db-99b6-e1bd85674136</child>
+		</requires>
+		<requires>
+			<child>3210f02d-076d-498f-9854-76891829b082</child>
+		</requires>
+		<requires>
+			<child>9f5e283f-64e5-4f4d-ad34-71c2d3e22e48</child>
+		</requires>
+		<requires>
+			<child>c4c47df6-f405-4b86-9b28-1f325aa17ab5</child>
+		</requires>
+		<requires>
+			<child>26eab491-3073-4c07-a632-94db6746e681</child>
+		</requires>
+		<achieves name="achieves" score="1.0">
+			<child>98d1a8d5-4aa5-42ff-a055-041ba218f709</child>
+		</achieves>
+	</Role>
+	<Role id="32a1490c-4985-4d52-879b-6586fff66c2b" name="PlayerRole" x="649" y="184" width="-1" height="-1">
+		<requires>
+			<child>67b0fa62-3a34-46db-99b6-e1bd85674136</child>
+		</requires>
+		<requires>
+			<child>3210f02d-076d-498f-9854-76891829b082</child>
+		</requires>
+		<requires>
+			<child>9f5e283f-64e5-4f4d-ad34-71c2d3e22e48</child>
+		</requires>
+		<requires>
+			<child>2612db8b-88b5-4d33-b134-ea6ed6fb3741</child>
+		</requires>
+		<achieves name="achieves" score="1.0">
+			<child>fc28816a-1e4c-4d3b-ad20-21499cb88c22</child>
+		</achieves>
+	</Role>
+</RoleDiagram>

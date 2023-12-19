@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<environment>
+  <agents package="edu.nwmissouri.isl.aasis.case.market.persona.types" type="LateralMarketPersona">
+    <organization package="edu.nwmissouri.isl.aasis.case.market.capabilities.admin" type="MarketMaster"/>
+    <agent>L39AinL39A</agent>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.participate" type="PokerCommunicationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.primary.capabilities.manage" type="DateTimeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.connect" type="PokerConnectCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.admin" type="PokerAdminCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.admin" type="DealPokerCapability"/>
+  </agents>
+  <agents package="edu.nwmissouri.isl.aasis.case.primary.persona.types" type="NeighborhoodPersona">
+    <organization package="edu.nwmissouri.isl.aasis.case.market.capabilities.participate" type="MarketParticipant"/>
+    <agent>N43AinL39A</agent>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.participate" type="PokerCommunicationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.primary.capabilities.manage" type="DateTimeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.connect" type="PokerConnectCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.participate" type="PokerParticipateCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities.participate" type="PlayPokerCapability"/>
+  </agents>
+</environment>

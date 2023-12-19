@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<environment>
+  <agents package="edu.nwmissouri.isl.aasis.case.self.persona.types" type="SelfPersona">
+    <organization package="edu.nwmissouri.isl.aasis.case.self.capabilities.admin" type="AgentMaster"/>
+    <agent>selfH44</agent>
+    <capability package="edu.nwmissouri.isl.aasis.case.market.capabilities" type="PokerCommunicationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.self.capabilities.admin" type="SelfControlCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.grid.capabilities.participate" type="PokerCommunicationCapability"/>
+    <capability package="edu.ksu.cis.macr.aasis.agent.persona.ec_cap" type="DateTimeCapability"/>
+  </agents>
+  <agents package="edu.nwmissouri.isl.aasis.case.primary.persona.types" type="HomePersona">
+    <organization package="edu.nwmissouri.isl.aasis.case.self.capabilities.participate" type="AgentParticipant"/>
+    <agent>H44</agent>
+    <capability package="edu.ksu.cis.macr.aasis.agent.persona.ec_cap" type="ParticipateCapability"/>
+    <capability package="edu.ksu.cis.macr.aasis.agent.persona.ec_cap" type="AutonomousOperationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.power.agent.capabilities" type="AssessReactivePowerQualityCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.power.agent.capabilities" type="AssessReactivePowerCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.grid.capabilities.participate" type="PokerCommunicationCapability"/>
+    <capability package="edu.ksu.cis.macr.aasis.agent.persona.ec_cap" type="DateTimeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.power.agent.capabilities" type="ManageHomeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.power.agent.capabilities" type="SmartInverterCapability">
+      <parameter type="String">SI-44</parameter>
+    </capability>
+    <capability package="edu.nwmissouri.isl.aasis.case.power.agent.capabilities" type="SmartMeterCapability">
+      <parameter type="String">SM-44</parameter>
+      <parameter type="double">5.0</parameter>
+    </capability>
+  </agents>
+</environment>

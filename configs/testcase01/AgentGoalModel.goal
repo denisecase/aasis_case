@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="Intelligent Employee Scheduler Goal Model" embedded="false">
+	<Goal id="9d3b987e-28ab-431a-879c-36d2d7856a54" name="Succeed" number="1" preference="1.0" x="219" y="93" width="-1" height="-1" definition="" description="Input data to agent system" color="No">
+			<parameter name="initialGuidelines" collection="" type="initalGuidelines"/>
+		<and>
+			<child>0ec2f5c5-7a9c-4c55-8f45-6111105e89e2</child>
+		</and>
+		<and>
+			<child>fd9ee219-9058-4395-a913-6ea484fc199a</child>
+		</and>
+	</Goal>
+	<Goal id="0ec2f5c5-7a9c-4c55-8f45-6111105e89e2" name="ManageGame" number="1.1" preference="2.0" x="44" y="247" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="initialGuidelines" collection="Collection" type="initialGuidelines"/>
+		<triggers name="Referees" min="" max="">
+			<child>fd9ee219-9058-4395-a913-6ea484fc199a</child>
+			<parameter name="initialGuidelines" collection="Collection" type="initialGuidelines"/>
+		</triggers>
+	</Goal>
+	<Goal id="fd9ee219-9058-4395-a913-6ea484fc199a" name="PlayGame" number="1.2" preference="3.0" x="432" y="249" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="initialGuidelines" collection="Collection" type="initialGuidelines"/>
+	</Goal>
+</GoalDiagram>

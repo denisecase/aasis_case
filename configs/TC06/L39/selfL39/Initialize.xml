@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<goalparameters>
+  <tictactoeConnections expectedmaster="L39inL39" in="orgL39" to="N43inL39"/>
+  <connections expectedmaster="L39AinL39A" in="orgL39A" to="N43AinL39A"/>
+  <orgL39 combinedkw="160.0" orgModelFolder="grid" specpath="L39/orgL39"/>
+  <pokerGuidelines auctionAlgorithm="1" authorizedParticipants="43 48 53 58" iteration="0" maxIteration="1" openTimeSlice="1" purchaseTimeSlice="10" tierNumber="2"/>
+  <orgL39A combinedkw="160.0" orgModelFolder="market" specpath="L39/orgL39A"/>
+  <lateralGuidelines maxKW="160.0"/>
+</goalparameters>

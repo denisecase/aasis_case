@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<goalparameters>
+  <tictactoeConnections expectedmaster="N43inN43" in="orgN43" to="N43inN43"/>
+  <pokerDealerConnections expectedmaster="N43AinN43A" in="orgN43A" to="N43AinN43A"/>
+  <pokerPokerPlayerGuidelines buyPriceFlexibilityPercent="0.0" desiredBuyPrice_centsperkWh="0.1238" desiredSellPrice_centsperkWh="0.0" isSell="0" kWh="5.0775" openingTimeSlice="1" purchaseTimeSlice="10" sellPriceFlexibilityPercent="0.0" tierNumber="1"/>
+  <playerGuidelines maxKW="5.0"/>
+</goalparameters>

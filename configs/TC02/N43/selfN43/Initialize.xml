@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<goalparameters>
+  <tictactoeConnections expectedmaster="N43inN43" in="orgN43" to="H44inN43"/>
+  <connections expectedmaster="N43AinN43A" in="orgN43A" to="H44AinN43A"/>
+  <pokerPokerPlayerGuidelines buyPriceFlexibilityPercent="0.0" desiredBuyPrice_centsperkWh="0.0" desiredSellPrice_centsperkWh="0.0" isSell="0" kWh="0.0" openingTimeSlice="1" purchaseTimeSlice="10" sellPriceFlexibilityPercent="0.0" tierNumber="2"/>
+  <orgN43 combinedkw="20.0" orgModelFolder="grid" specpath="N43/orgN43"/>
+  <pokerGuidelines auctionAlgorithm="1" authorizedParticipants="44, 45, 46, 47" iteration="0" maxIteration="1" openTimeSlice="1" purchaseTimeSlice="10" tierNumber="1"/>
+  <orgN43A combinedkw="20.0" orgModelFolder="market" specpath="N43/orgN43A"/>
+  <tictactoeGuidelines maxKW="20.0"/>
+</goalparameters>

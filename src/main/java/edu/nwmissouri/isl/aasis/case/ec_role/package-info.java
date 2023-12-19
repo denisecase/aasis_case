@@ -1,0 +1,2 @@
+/** * Provides classes to define roles. Be sure to use communication capability interface names in role models and use communication capability implementation classes in agent.xml files. InternalCommunicationCapability should be included in all roles in the role models, but does not need to appear in the agent.xml files.  */
+package edu.nwmissouri.isl.aasis.case.ec_role;

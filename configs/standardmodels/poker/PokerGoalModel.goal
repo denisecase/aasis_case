@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="Poker Goal Model" embedded="false">
+	<Goal id="d963e6bd-2ce6-44c9-854c-0e35a8124432" name="Succeed" number="2.0" preference="1.0" x="321" y="7" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="pokerConnections" collection="" type="Connections"/>
+			<parameter name="pokerGuidelines" collection="" type="PokerGuidelines"/>
+		<and>
+			<child>91142357-b59c-4866-ab65-580e6923c10c</child>
+		</and>
+		<and>
+			<child>f7dde922-8b6a-49f2-b7be-6ddc5ad4c77d</child>
+		</and>
+	</Goal>
+	<Goal id="91142357-b59c-4866-ab65-580e6923c10c" name="Deal Poker" number="2.1" preference="1.0" x="28" y="261" width="297" height="118" definition="" description="" color="No">
+			<parameter name="pokerConnections" collection="" type="Connections"/>
+			<parameter name="pokerPlayerGuidelines" collection="" type="PokerPlayerGuidelines"/>
+			<parameter name="pokerGuidelines" collection="" type="PokerGuidelines"/>
+			<parameter name="pokerDealerConnections" collection="" type="Connections"/>
+		<triggers name="addPokerParticipant" min="" max="">
+			<child>f7dde922-8b6a-49f2-b7be-6ddc5ad4c77d</child>
+			<bendpoint x="421" y="229"/>
+			<parameter name="pokerDealerConnections" collection="" type="Connections"/>
+			<parameter name="pokerPokerPlayerGuidelines" collection="" type="PokerPokerPlayerGuidelines"/>
+		</triggers>
+		<negative_triggers name="removePokerParticipant" min="" max="">
+			<child>f7dde922-8b6a-49f2-b7be-6ddc5ad4c77d</child>
+			<bendpoint x="441" y="422"/>
+			<parameter name="pokerDealerConnections" collection="" type="Connections"/>
+			<parameter name="pokerPlayerGuidelines" collection="" type="PokerPlayerGuidelines"/>
+		</negative_triggers>
+	</Goal>
+	<Goal id="f7dde922-8b6a-49f2-b7be-6ddc5ad4c77d" name="Play Poker" number="2.2" preference="1.0" x="590" y="268" width="273" height="103" definition="" description="" color="No">
+			<parameter name="pokerDealerConnections" collection="" type="Connections"/>
+			<parameter name="pokerPlayerGuidelines" collection="" type="PokerPlayerGuidelines"/>
+	</Goal>
+</GoalDiagram>

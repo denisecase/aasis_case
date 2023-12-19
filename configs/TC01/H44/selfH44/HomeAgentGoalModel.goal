@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="Home Agent Goal Model - Autonomous Operation" embedded="false">
+	<Goal id="9d3b987e-28ab-431a-879c-36d2d7856a54" name="Succeed" number="1" preference="1.0" x="324" y="14" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="playerGuidelines" collection="" type="PokerPlayerGuidelines"/>
+		<and>
+			<child>55a1698c-6b60-41fe-8cf2-ca120fa34fd4</child>
+		</and>
+		<and>
+			<child>4c14d43c-3dec-4106-93b5-d560f7f3851e</child>
+		</and>
+	</Goal>
+	<Goal id="55a1698c-6b60-41fe-8cf2-ca120fa34fd4" name="Self Control" number="2" preference="1.0" x="193" y="204" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="playerGuidelines" collection="" type="PokerPlayerGuidelines"/>
+	</Goal>
+	<Goal id="4c14d43c-3dec-4106-93b5-d560f7f3851e" name="Manage Home" number="4" preference="1.0" x="472" y="201" width="-1" height="-1" definition="" description="" color="No">
+			<parameter name="playerGuidelines" collection="" type="PokerPlayerGuidelines"/>
+	</Goal>
+</GoalDiagram>

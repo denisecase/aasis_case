@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<environment>
+  <agents package="edu.nwmissouri.isl.aasis.case.agent_types" type="Master">
+    <organization package="edu.nwmissouri.isl.aasis.case.cc_m" type="Master"/>
+    <agent>Referee</agent>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="AutonomousOperationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="DateTimeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="SetupGameCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="RefereeGameCapability"/>
+  </agents>
+  <agents package="edu.nwmissouri.isl.aasis.case.agent_types" type="Participant">
+    <organization package="edu.nwmissouri.isl.aasis.case.cc_p" type="Participant"/>
+    <agent>Player 1</agent>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="AutonomousOperationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="DateTimeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="PlayGameCapability">
+      <parameter type="int">0</parameter>
+    </capability>
+  </agents>
+  <agents package="edu.nwmissouri.isl.aasis.case.agent_types" type="Participant">
+    <organization package="edu.nwmissouri.isl.aasis.case.cc_p" type="Participant"/>
+    <agent>Player 2</agent>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="AutonomousOperationCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="DateTimeCapability"/>
+    <capability package="edu.nwmissouri.isl.aasis.case.ec_cap" type="PlayGameCapability">
+      <parameter type="int">1</parameter>
+    </capability>
+  </agents>
+</environment>
